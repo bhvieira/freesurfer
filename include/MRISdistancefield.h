@@ -109,8 +109,8 @@ class MRISDistanceField
         // bounds check -- the way surfaces are located in the brain
         // these checks will not ever be true
         if (bbox.minc[0] < 0) bbox.minc[0] = 0;
-        if (bbox.minc[1] < 0) bbox.minc[0] = 0;
-        if (bbox.minc[2] < 0) bbox.minc[0] = 0;
+        if (bbox.minc[1] < 0) bbox.minc[1] = 0;
+        if (bbox.minc[2] < 0) bbox.minc[2] = 0;
         if (bbox.maxc[0] >= mri_distfield->width)  bbox.maxc[0] = mri_distfield->width-1;
         if (bbox.maxc[1] >= mri_distfield->height) bbox.maxc[1] = mri_distfield->height-1;
         if (bbox.maxc[2] >= mri_distfield->depth)  bbox.maxc[2] = mri_distfield->depth-1;
